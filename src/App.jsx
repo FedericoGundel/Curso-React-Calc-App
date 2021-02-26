@@ -11,7 +11,7 @@ const App = () => {
        <main className="react-calculator">
            <Result value={resultado}/>
            <Numbers onClickNumber={number=>
-                    modificarResultado(number)
+                    modificarResultado(`${resultado}${number}`)
                 }
             />
            <Functions onContentClear={clear => 
