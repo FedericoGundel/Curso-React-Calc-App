@@ -21,6 +21,6 @@ const Numbers = ({onClickNumber}) =>(
 )
 
 Numbers.propTypes = {
-    onClikNumber: PropTypes.func.isRequired
+    onClickNumber: PropTypes.func.isRequired
 }
  export default Numbers
