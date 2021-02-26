@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import './App.css'
 import Numbers from './components/Numbers'
 import Functions from './components/Functions'
@@ -6,11 +6,15 @@ import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 
 const App = () => {
+    const arrayState= useState("");
+    const resultado = arrayState[0]
+    const modificarResultado = arrayState[1]
+    
     return (
        <main className="react-calculator">
-           <Result value={"10"}/>
+           <Result value={resultado}/>
            <Numbers onClickNumber={number=>
-                    console.log("number: ",number)
+                    modificarResultado(number)
                 }
             />
            <Functions onContentClear={clear => 
