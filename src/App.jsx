@@ -31,7 +31,7 @@ const App = () => {
                     modificarResultado(`${resultado}${operation}`)
                 }
                 onClickEqual={equal => 
-                    modificarResultado(`${resultado}${equal}`)
+                    modificarResultado(eval(resultado))
                 }
             />
        </main>
