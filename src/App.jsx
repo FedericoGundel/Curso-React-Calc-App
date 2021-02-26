@@ -6,10 +6,7 @@ import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 
 const App = () => {
-    const arrayState= useState("");
-    const resultado = arrayState[0]
-    const modificarResultado = arrayState[1]
-    
+    const [resultado, modificarResultado]= useState("")
     return (
        <main className="react-calculator">
            <Result value={resultado}/>
