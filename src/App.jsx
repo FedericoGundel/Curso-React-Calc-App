@@ -15,17 +15,20 @@ const App = () => {
                 }
             />
            <Functions onContentClear={clear => 
-                    console.log("Delete all: ",clear)
+                    modificarResultado("")
                 }
-                onDelete={delet => 
-                    console.log("Delete: ", delet)
+                onDelete={() => {
+                    const newResultado = resultado.substring(0,resultado.length-1)
+                    modificarResultado(newResultado)
+                }
+                    
                 }
             />            
            <MathOperations onClickOperation={operation => 
-                    console.log("operacion: ",operation)
+                    modificarResultado(`${resultado}${operation}`)
                 }
                 onClickEqual={equal => 
-                    console.log("Equal: ", equal)
+                    modificarResultado(`${resultado}${equal}`)
                 }
             />
        </main>
