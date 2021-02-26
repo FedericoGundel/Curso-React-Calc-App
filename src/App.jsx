@@ -18,8 +18,11 @@ const App = () => {
                     modificarResultado("")
                 }
                 onDelete={() => {
-                    const newResultado = resultado.substring(0,resultado.length-1)
-                    modificarResultado(newResultado)
+                    if(resultado.length>0){
+                        const newResultado = resultado.substring(0,resultado.length-1)
+                        modificarResultado(newResultado)
+                    }
+                    
                 }
                     
                 }
